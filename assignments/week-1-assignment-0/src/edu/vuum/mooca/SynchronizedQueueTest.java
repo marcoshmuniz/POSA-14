@@ -6,7 +6,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.vuum.mooca.SynchronizedQueue.*;
+import edu.vuum.mooca.SynchronizedQueueMarcos.*;
 
 /**
  * @class SynchronizedQueueTest
@@ -30,7 +30,7 @@ public class SynchronizedQueueTest {
     	System.out.println("Starting " + qName + " test...");
 
         SynchronizedQueueResult result =
-            SynchronizedQueue.testQueue(queue);
+            SynchronizedQueueMarcos.testQueue(queue);
 
         System.out.println("End " + qName + " test.\n");
         System.out.println("See JUnit view for results -- \n" +
@@ -52,7 +52,7 @@ public class SynchronizedQueueTest {
         // Indicate how big the queue should be, which should be
         // smaller than the number of iterations to induce blocking
         // behavior.
-        queueSize = SynchronizedQueue.mMaxIterations / 10;
+        queueSize = SynchronizedQueueMarcos.mMaxIterations / 10;
     }
 
     /**
